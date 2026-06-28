@@ -540,7 +540,7 @@ export default function App() {
 
   const handleLogout = useCallback(() => {
     localStorage.removeItem("token"); localStorage.removeItem("user");
-    setToken(""); setUser(null); setIsOtpSent(false); setOtp(""); setPhone("");
+    setToken(""); setUser(null); setPhone("");
     showToast("Berhasil logout", "info");
   }, [showToast]);
 
