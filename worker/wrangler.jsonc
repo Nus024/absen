@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "absen",
+	"name": "absen-worker",
 	"main": "src/index.js",
 	"compatibility_date": "2026-06-28",
 	"observability": {
