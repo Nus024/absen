@@ -54,7 +54,9 @@ export class ApiError extends Error {
  * @returns {Promise<unknown>} Parsed JSON body
  */
 async function handleResponse(res) {
-  if (res.status === 401) {
+  const isLoginRequest = res.url && res.url.includes('/api/login');
+
+  if (res.status === 401 && !isLoginRequest) {
     // Hapus kredensial lama dan beri tahu komponen React via event
     localStorage.removeItem("token");
     localStorage.removeItem("user");
